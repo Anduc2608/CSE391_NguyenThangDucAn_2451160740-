@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+
+<h1>Thanh toán đơn hàng</h1>
+
+<form action="#" method="POST">
+
+    <label for="search">Tìm sản phẩm:</label>
+    <input type="text" id="search" list="products" placeholder="Nhập tên sản phẩm">
+    <datalist id="products">
+        <option value="iPhone 16 Pro Max">
+        <option value="Samsung S24 Ultra">
+        <option value="Xiaomi 14">
+    </datalist>
+
+    <h2>Giỏ hàng</h2>
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>iPhone 16 Pro Max</td>
+                <td>25.000.000đ</td>
+                <td>1</td>
+                <td>25.000.000đ</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Samsung S24 Ultra</td>
+                <td>22.000.000đ</td>
+                <td>1</td>
+                <td>22.000.000đ</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Xiaomi 14</td>
+                <td>15.000.000đ</td>
+                <td>1</td>
+                <td>15.000.000đ</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4"><strong>Tổng cộng</strong></td>
+                <td><output>62.000.000đ</output></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Phương thức thanh toán</h2>
+
+    <input type="radio" id="cod" name="payment" value="cod" required>
+    <label for="cod">COD</label>
+
+    <input type="radio" id="bank" name="payment" value="bank">
+    <label for="bank">Chuyển khoản</label>
+
+    <input type="radio" id="wallet" name="payment" value="wallet">
+    <label for="wallet">Ví điện tử</label>
+
+    <br><br>
+
+    <label for="coupon">Mã giảm giá</label><br>
+    <input type="text" id="coupon" name="coupon"
+           placeholder="SALE2026"
+           pattern="SALE[0-9]{4}"><br><br>
+
+    <label for="note">Ghi chú</label><br>
+    <textarea id="note" name="note" rows="3"
+              placeholder="Ghi chú thêm (không bắt buộc)"></textarea>
+
+    <h3>Điểm tích lũy</h3>
+    <progress value="70" max="100"></progress>
+
+    <h2>Thông tin giao hàng</h2>
+
+    <label for="delivery-date">Ngày giao hàng</label><br>
+    <input type="date" id="delivery-date" name="delivery-date"
+           min="2026-05-01"><br><br>
+
+    <label for="time-slot">Khung giờ</label><br>
+    <select id="time-slot" name="time-slot">
+        <option>Sáng (8-12h)</option>
+        <option>Chiều (14-18h)</option>
+        <option>Tối (18-21h)</option>
+    </select><br><br>
+
+    <label for="range">Thời gian giao (ngày)</label><br>
+    <input type="range" id="range" name="range"
+           min="1" max="7" step="1"><br><br>
+
+    <button type="submit" aria-label="Xác nhận đặt hàng">
+        Đặt hàng
+    </button>
+
+</form>
+
+</body>
+</html>
