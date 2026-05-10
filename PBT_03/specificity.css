@@ -1,0 +1,49 @@
+/* Rule 1 - Specificity: 0,0,1 (ID, Class, Tag) */
+p {
+  color: gray;
+}
+
+/* Rule 2 - Specificity: 0,0,2 */
+html p {
+  color: sienna;
+}
+
+/* Rule 3 - Specificity: 0,1,0 */
+.text {
+  color: blue;
+}
+
+/* Rule 4 - Specificity: 0,1,1 */
+p.text {
+  color: green;
+}
+
+/* Rule 5 - Specificity: 0,2,0 */
+.text.highlight {
+  color: orange;
+}
+
+/* Rule 6 - Specificity: 0,2,1 */
+p.text.highlight {
+  color: purple;
+}
+
+/* Rule 7 - Specificity: 1,0,0 */
+#demo {
+  color: crimson;
+}
+
+/* Rule 8 - Specificity: 1,0,1 */
+p#demo {
+  color: deeppink;
+}
+
+/* Rule 9 - Specificity: 1,1,0 */
+#demo.text {
+  color: darkorange;
+}
+
+/* Rule 10 - Specificity: 1,2,1 */
+p#demo.text.highlight {
+  color: red;
+}
