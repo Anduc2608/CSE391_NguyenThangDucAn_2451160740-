@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 960px;
+    margin: 30px auto;
+    border: 3px solid black;
+    overflow: auto;
+}
+
+/* =====================
+   Layout lỗi
+===================== */
+
+.broken .sidebar {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: lightblue;
+    float: left;
+}
+
+.broken .content {
+    width: 660px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background: lightcoral;
+    float: left;
+}
+
+/* =====================
+   Fix bằng border-box
+===================== */
+
+.fixed-borderbox * {
+    box-sizing: border-box;
+}
+
+.fixed-borderbox .sidebar {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: lightgreen;
+    float: left;
+}
+
+.fixed-borderbox .content {
+    width: 660px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background: lightyellow;
+    float: left;
+}
+
+/* =====================
+   Fix không border-box
+===================== */
+
+.fixed-normal .sidebar {
+    width: 258px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #cfe8ff;
+    float: left;
+}
+
+.fixed-normal .content {
+    width: 598px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background: #ffd6d6;
+    float: left;
+}
