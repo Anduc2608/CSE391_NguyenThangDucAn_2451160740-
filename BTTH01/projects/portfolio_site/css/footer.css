@@ -65,6 +65,9 @@
   margin: 0;
 }
 
+.footer-logo {
+  word-break: break-word;
+}
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .footer-content {
