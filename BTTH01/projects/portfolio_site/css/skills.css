@@ -11,10 +11,10 @@
 }
 
 .skills-list {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
 }
 
@@ -37,4 +37,19 @@
   height: 100%;
   background: var(--color-primary);
   border-radius: 100px;
+  width: 0;
+  transition: width 1s ease;
+}
+ 
+.skill-fill.animate {
+  width: var(--skill-width);
+}
+
+@media (max-width: 768px) {
+  #skills h2 {
+    font-size: 1.6rem;
+  }
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
 }
