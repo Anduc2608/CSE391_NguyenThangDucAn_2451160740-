@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/hero.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
   </head>
   <body>
     <input type="checkbox" id="menu-toggle" />
@@ -33,6 +34,7 @@
         <p>Full-Stack Developer | UI Designer | Problem Solver</p>
         <a href="#portfolio" class="cta-button">View My Work</a>
       </section>
+       <!-- About -->
       <section id="about">
         <div class="container">
           <div class="about-grid">
@@ -47,6 +49,7 @@
           </div>
         </div>
       </section>
+       <!-- Skills -->
       <section id="skills">
         <div class="container">
           <h2>Skills</h2>
@@ -76,6 +79,69 @@
               </div>
               <div class="skill-bar">
                 <div class="skill-fill" style="width: 10%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Portfolio -->
+      <section id="portfolio" class="portfolio-section">
+        <div class="container">
+          <h2>My Portfolio</h2>
+
+          <div class="portfolio-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Web</button>
+            <button class="filter-btn">Mobile</button>
+            <button class="filter-btn">Design</button>
+          </div>
+
+          <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="web">
+              <img src="https://placehold.co/400x300" alt="E-Commerce Website" />
+              <div class="portfolio-overlay">
+                <h3>E-Commerce Website</h3>
+                <p>React + Node.js</p>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="web">
+              <img src="https://placehold.co/400x300" alt="Blog Platform" />
+              <div class="portfolio-overlay">
+                <h3>Blog Platform</h3>
+                <p>Vue + Firebase</p>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="web">
+              <img src="https://placehold.co/400x300" alt="Admin Dashboard" />
+              <div class="portfolio-overlay">
+                <h3>Admin Dashboard</h3>
+                <p>React + Tailwind</p>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="mobile">
+              <img src="https://placehold.co/400x300" alt="Food Delivery App" />
+              <div class="portfolio-overlay">
+                <h3>Food Delivery App</h3>
+                <p>React Native</p>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="mobile">
+              <img src="https://placehold.co/400x300" alt="Fitness Tracker" />
+              <div class="portfolio-overlay">
+                <h3>Fitness Tracker</h3>
+                <p>Flutter</p>
+              </div>
+            </div>
+
+            <div class="portfolio-item" data-category="design">
+              <img src="https://placehold.co/400x300" alt="Brand Identity" />
+              <div class="portfolio-overlay">
+                <h3>Brand Identity</h3>
+                <p>Figma</p>
               </div>
             </div>
           </div>
