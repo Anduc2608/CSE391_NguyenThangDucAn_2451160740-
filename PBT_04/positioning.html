@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Demo</title>
+
+    <!-- Liên kết file CSS -->
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body>
+
+    <!-- ===== HEADER FIXED ===== -->
+    <header class="header">
+        <div class="logo">MyShop</div>
+
+        <nav class="nav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Sản phẩm</a>
+            <a href="#">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="container">
+
+        <!-- ===== CONTENT ===== -->
+        <main class="content">
+
+            <!-- Product Card -->
+            <div class="product-card">
+
+                <!-- Badge HOT -->
+                <div class="badge">HOT</div>
+
+                <img 
+                    src="https://picsum.photos/400/220"
+                    alt="product"
+                >
+
+                <h2>Gaming Laptop</h2>
+
+                <p>
+                    Hiệu năng mạnh, thiết kế hiện đại,
+                    phù hợp học tập và gaming.
+                </p>
+
+                <button>Mua ngay</button>
+            </div>
+
+            <!-- Nội dung giả để tạo scroll -->
+            <section class="dummy-content">
+                <h2>Nội dung dài để test scroll</h2>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </section>
+
+        </main>
+
+        <!-- ===== STICKY SIDEBAR ===== -->
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+
+            <ul>
+                <li>Danh mục 1</li>
+                <li>Danh mục 2</li>
+                <li>Danh mục 3</li>
+                <li>Danh mục 4</li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top">
+        ↑
+    </button>
+
+</body>
+</html>
