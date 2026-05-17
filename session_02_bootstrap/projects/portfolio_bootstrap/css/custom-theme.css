@@ -95,3 +95,65 @@
   border-color: #14b8a6;
   box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.15);
 }
+
+/* Google Fonts - Inter */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Color palette documented */
+:root {
+  /* Teal palette */
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-100: #ccfbf1;
+
+  /* Slate palette */
+  --color-slate-900: #0f172a;
+  --color-slate-700: #334155;
+  --color-slate-500: #64748b;
+  --color-slate-200: #e2e8f0;
+  --color-slate-50: #f8fafc;
+}
+
+/* Navbar brand color */
+.navbar-brand {
+  color: #14b8a6 !important;
+}
+
+/* Section headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0f172a;
+}
+
+/* Blog header gradient dùng teal */
+.blog-header-teal {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%) !important;
+}
+
+/* Footer */
+footer {
+  background-color: #0f172a !important;
+  color: #f8fafc;
+}
+
+/* Navbar dark bg */
+.navbar.bg-dark {
+  background-color: #0f172a !important;
+}
+
+/* Smooth transitions toàn trang */
+* {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
