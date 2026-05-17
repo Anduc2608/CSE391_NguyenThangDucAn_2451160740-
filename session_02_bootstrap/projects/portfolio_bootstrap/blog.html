@@ -179,5 +179,38 @@
         </div>
       </div>
     </section>
+
+    <!-- Comment Section -->
+    <section id="comments" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Comment Form -->
+            <div class="card shadow-sm border-0 mb-5">
+              <div class="card-header bg-white fw-bold fs-5">Leave a Comment</div>
+              <div class="card-body p-4">
+                <form id="commentForm">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="commentName" class="form-label fw-semibold">Name</label>
+                      <input type="text" class="form-control" id="commentName" placeholder="Your name" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="commentEmail" class="form-label fw-semibold">Email</label>
+                      <input type="email" class="form-control" id="commentEmail" placeholder="your@email.com" required />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="commentText" class="form-label fw-semibold">Comment</label>
+                    <textarea class="form-control" id="commentText" rows="4" placeholder="Write your comment..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary"><i class="bi bi-send me-2"></i>Post Comment</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
