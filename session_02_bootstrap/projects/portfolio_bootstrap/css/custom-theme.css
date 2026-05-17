@@ -1,0 +1,53 @@
+:root {
+  /* Primary: Teal (thay indigo mặc định của Bootstrap) */
+  --bs-primary: #14b8a6;
+  --bs-primary-rgb: 20, 184, 166;
+
+  /* Secondary: Slate */
+  --bs-secondary: #64748b;
+  --bs-secondary-rgb: 100, 116, 139;
+}
+
+/* Button primary */
+.btn-primary {
+  background-color: #14b8a6;
+  border-color: #14b8a6;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #0d9488;
+  border-color: #0d9488;
+}
+
+/* Button outline primary */
+.btn-outline-primary {
+  color: #14b8a6;
+  border-color: #14b8a6;
+}
+
+.btn-outline-primary:hover {
+  background-color: #14b8a6;
+  border-color: #14b8a6;
+  color: white;
+}
+
+/* Text primary */
+.text-primary {
+  color: #14b8a6 !important;
+}
+
+/* Background primary */
+.bg-primary {
+  background-color: #14b8a6 !important;
+}
+
+/* Border primary */
+.border-primary {
+  border-color: #14b8a6 !important;
+}
+
+/* Progress bar */
+.progress-bar.bg-primary {
+  background-color: #14b8a6 !important;
+}
