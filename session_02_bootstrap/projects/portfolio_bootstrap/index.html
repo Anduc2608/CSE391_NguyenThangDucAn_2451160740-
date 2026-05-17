@@ -56,51 +56,53 @@
       </section>
 
       <!-- About -->
-      <section id="about">
+       <section id="about" class="py-5">
         <div class="container">
-          <div class="about-grid">
-            <div class="about-image">
-              <img src="https://placehold.co/400x400" alt="Avatar" />
+          <h2 class="text-center fw-bold mb-5">About Me</h2>
+          <div class="row align-items-center g-5">
+            <div class="col-lg-5 text-center">
+              <img src="https://placehold.co/400x400" alt="Avatar" class="rounded-circle img-fluid shadow-lg" style="max-width: 300px" />
             </div>
-            <div class="about-text">
-              <h2>About Me</h2>
-              <p class="lead">I'm a passionate developer with 3+ years of experience building web applications.</p>
-              <p>Specialized in Frontend development with React and Vue. Also experienced in Backend with Node.js and Python.</p>
+            <div class="col-lg-7">
+              <p class="lead fw-semibold">I'm a passionate developer with 3+ years of experience building web applications.</p>
+              <p class="text-muted">Specialized in Frontend development with React and Vue. Also experienced in Backend with Node.js and Python.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Skills -->
-      <section id="skills">
+       <section id="skills" class="py-5 bg-light">
         <div class="container">
-          <h2>Skills</h2>
-          <div class="skills-list">
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>HTML</span>
-                <span>40%</span>
+          <h2 class="text-center fw-bold mb-5">Skills</h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="mb-4">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="fw-semibold">HTML</span>
+                  <span class="text-primary fw-semibold">40%</span>
+                </div>
+                <div class="progress" style="height: 12px">
+                  <div class="progress-bar bg-primary" style="width: 40%"></div>
+                </div>
               </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 40%"></div>
+            <div class="mb-4">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="fw-semibold">CSS</span>
+                  <span class="text-primary fw-semibold">30%</span>
+                </div>
+                <div class="progress" style="height: 12px">
+                  <div class="progress-bar bg-primary" style="width: 30%"></div>
+                </div>
               </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>CSS</span>
-                <span>30%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 30%"></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-header">
-                <span>JavaScript</span>
-                <span>10%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-fill" style="width: 10%"></div>
+              <div class="mb-4">
+                <div class="d-flex justify-content-between mb-1">
+                  <span class="fw-semibold">JavaScript</span>
+                  <span class="text-primary fw-semibold">10%</span>
+                </div>
+                <div class="progress" style="height: 12px">
+                  <div class="progress-bar bg-primary" style="width: 10%"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -108,144 +110,119 @@
       </section>
 
       <!-- Portfolio -->
-      <section id="portfolio" class="portfolio-section">
+      <section id="portfolio" class="py-5">
         <div class="container">
-          <h2>My Portfolio</h2>
+           <h2 class="text-center fw-bold mb-4">My Portfolio</h2>
 
-          <div class="portfolio-filters">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Web</button>
-            <button class="filter-btn">Mobile</button>
-            <button class="filter-btn">Design</button>
+
+          <div class="d-flex justify-content-center gap-2 mb-5">
+            <button class="btn btn-primary">All</button>
+            <button class="btn btn-outline-primary">Web</button>
+            <button class="btn btn-outline-primary">Mobile</button>
+            <button class="btn btn-outline-primary">Design</button>
           </div>
 
-          <div class="portfolio-grid">
-            <div class="portfolio-item" data-category="web">
-              <a href="#lightbox-1">
-                <img src="https://placehold.co/400x300" alt="E-Commerce Website" />
-                <div class="portfolio-overlay">
-                  <h3>E-Commerce Website</h3>
-                  <p>React + Node.js</p>
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                <img src="https://placehold.co/400x300" class="card-img-top" alt="E-Commerce Website" />
+                <div class="card-body">
+                  <h5 class="card-title">E-Commerce Website</h5>
+                  <p class="card-text text-muted">React + Node.js</p>
                 </div>
-              </a>
+              </div>
             </div>
 
-            <div class="portfolio-item" data-category="web">
-              <a href="#lightbox-2">
-                <img src="https://placehold.co/400x300" alt="Blog Platform" />
-                <div class="portfolio-overlay">
-                  <h3>Blog Platform</h3>
-                  <p>Vue + Firebase</p>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                <img src="https://placehold.co/400x300" class="card-img-top" alt="Blog Platform" />
+                <div class="card-body">
+                  <h5 class="card-title">Blog Platform</h5>
+                  <p class="card-text text-muted">Vue + Firebase</p>
                 </div>
-              </a>
+              </div>
             </div>
 
-            <div class="portfolio-item" data-category="web">
-              <a href="#lightbox-3">
-                <img src="https://placehold.co/400x300" alt="Admin Dashboard" />
-                <div class="portfolio-overlay">
-                  <h3>Admin Dashboard</h3>
-                  <p>React + Tailwind</p>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                <img src="https://placehold.co/400x300" class="card-img-top" alt="Admin Dashboard" />
+                <div class="card-body">
+                  <h5 class="card-title">Admin Dashboard</h5>
+                  <p class="card-text text-muted">React + Tailwind</p>
                 </div>
-              </a>
+              </div>
             </div>
 
-            <div class="portfolio-item" data-category="mobile">
-              <a href="#lightbox-4">
-                <img src="https://placehold.co/400x300" alt="Food Delivery App" />
-                <div class="portfolio-overlay">
-                  <h3>Food Delivery App</h3>
-                  <p>React Native</p>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                <img src="https://placehold.co/400x300" class="card-img-top" alt="Food Delivery App" />
+                <div class="card-body">
+                  <h5 class="card-title">Food Delivery App</h5>
+                  <p class="card-text text-muted">React Native</p>
                 </div>
-              </a>
+              </div>
+            </div>
             </div>
 
-            <div class="portfolio-item" data-category="mobile">
-              <a href="#lightbox-5">
-                <img src="https://placehold.co/400x300" alt="Fitness Tracker" />
-                <div class="portfolio-overlay">
-                  <h3>Fitness Tracker</h3>
-                  <p>Flutter</p>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                <img src="https://placehold.co/400x300" class="card-img-top" alt="Fitness Tracker" />
+                <div class="card-body">
+                  <h5 class="card-title">Fitness Tracker</h5>
+                  <p class="card-text text-muted">Flutter</p>
                 </div>
-              </a>
+              </div>
             </div>
 
-            <div class="portfolio-item" data-category="design">
-              <a href="#lightbox-6">
-                <img src="https://placehold.co/400x300" alt="Brand Identity" />
-                <div class="portfolio-overlay">
-                  <h3>Brand Identity</h3>
-                  <p>Figma</p>
+             <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 shadow-sm border-0 overflow-hidden">
+                <img src="https://placehold.co/400x300" class="card-img-top" alt="Brand Identity" />
+                <div class="card-body">
+                  <h5 class="card-title">Brand Identity</h5>
+                  <p class="card-text text-muted">Figma</p>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Lightbox -->
-      <div id="lightbox-1" class="lightbox">
-        <img src="https://placehold.co/800x600" alt="E-Commerce Website" />
-        <a href="#" class="lightbox-close">&times;</a>
-      </div>
-
-      <div id="lightbox-2" class="lightbox">
-        <img src="https://placehold.co/800x600" alt="Blog Platform" />
-        <a href="#" class="lightbox-close">&times;</a>
-      </div>
-
-      <div id="lightbox-3" class="lightbox">
-        <img src="https://placehold.co/800x600" alt="Admin Dashboard" />
-        <a href="#" class="lightbox-close">&times;</a>
-      </div>
-
-      <div id="lightbox-4" class="lightbox">
-        <img src="https://placehold.co/800x600" alt="Food Delivery App" />
-        <a href="#" class="lightbox-close">&times;</a>
-      </div>
-
-      <div id="lightbox-5" class="lightbox">
-        <img src="https://placehold.co/800x600" alt="Fitness Tracker" />
-        <a href="#" class="lightbox-close">&times;</a>
-      </div>
-
-      <div id="lightbox-6" class="lightbox">
-        <img src="https://placehold.co/800x600" alt="Brand Identity" />
-        <a href="#" class="lightbox-close">&times;</a>
-      </div>
+      
 
       <!-- Contact -->
-      <section id="contact" class="contact-section">
+      <section id="contact" class="py-5 bg-light">
         <div class="container">
-          <h2>Get In Touch</h2>
-          <div class="contact-wrapper">
-            <div class="contact-info">
-              <h3>Contact Information</h3>
-              <p>Feel free to reach out. I'm always open to discussing new projects.</p>
-              <div class="info-item">
-                <span class="icon">📧</span>
+          <h2 class="text-center fw-bold mb-5">Get In Touch</h2>
+          <div class="row g-5">
+            <div class="col-lg-5">
+              <h5 class="fw-bold mb-3">Contact Information</h5>
+              <p class="text-muted">Feel free to reach out. I'm always open to discussing new projects.</p>
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-envelope text-primary fs-5"></i>
                 <span>Anduc12608@gmail.com</span>
               </div>
-              <div class="info-item">
-                <span class="icon">📍</span>
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt text-primary fs-5"></i>
                 <span>Hanoi, Vietnam</span>
               </div>
             </div>
-            <form class="contact-form">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            <div class="col-lg-7">
+              <form id="contactForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label fw-semibold">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" required />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label fw-semibold">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" required />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label fw-semibold">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
