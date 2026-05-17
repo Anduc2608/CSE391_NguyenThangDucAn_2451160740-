@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="z-index: 1030">
       <div class="container">
         <a class="navbar-brand fw-bold" href="index.html">Nguyễn Thắng Đức An</a>
         <button
@@ -94,7 +94,7 @@
           </div>
            <!-- Sidebar (4 columns) -->
           <div class="col-lg-4">
-            <div class="sticky-top pt-4" style="top: 80px">
+            <div class="sticky-top pt-4" style="top: 76px; z-index: 1">
               <!-- Search Widget -->
               <div class="card mb-4 shadow-sm border-0">
                 <div class="card-body">
@@ -208,7 +208,78 @@
                 </form>
               </div>
             </div>
+              <!-- Comments List -->
+            <h5 class="fw-bold mb-4">3 Comments</h5>
+            <div class="comments-list">
+              <!-- Comment 1 -->
+              <div class="comment-item d-flex gap-3 mb-4">
+                <img src="https://picsum.photos/50/50?random=7" class="rounded-circle flex-shrink-0" width="50" height="50" alt="Avatar" />
+                <div class="flex-grow-1">
+                  <div class="bg-white rounded-3 p-3 shadow-sm">
+                    <div class="d-flex justify-content-between mb-2">
+                      <h6 class="fw-bold mb-0">John Doe</h6>
+                      <small class="text-muted">2 hours ago</small>
+                    </div>
+                    <p class="mb-0 text-muted">Great article! Very helpful for beginners learning Bootstrap.</p>
+                  </div>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary reply-btn"><i class="bi bi-reply me-1"></i>Reply</button>
+                  </div>
+
+                  <!-- Nested Reply -->
+                  <div class="d-flex gap-3 mt-3 ms-4">
+                    <img src="https://picsum.photos/40/40?random=8" class="rounded-circle flex-shrink-0" width="40" height="40" alt="Avatar" />
+                    <div class="flex-grow-1">
+                      <div class="bg-white rounded-3 p-3 shadow-sm border-start border-primary border-3">
+                        <div class="d-flex justify-content-between mb-2">
+                          <h6 class="fw-bold mb-0 text-primary">
+                            Nguyên Trường <span class="badge bg-primary ms-1" style="font-size: 0.65rem">Author</span>
+                          </h6>
+                          <small class="text-muted">1 hour ago</small>
+                        </div>
+                        <p class="mb-0 text-muted">Thank you John! Glad it helped you.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Comment 2 -->
+              <div class="comment-item d-flex gap-3 mb-4">
+                <img src="https://picsum.photos/50/50?random=9" class="rounded-circle flex-shrink-0" width="50" height="50" alt="Avatar" />
+                <div class="flex-grow-1">
+                  <div class="bg-white rounded-3 p-3 shadow-sm">
+                    <div class="d-flex justify-content-between mb-2">
+                      <h6 class="fw-bold mb-0">Jane Smith</h6>
+                      <small class="text-muted">5 hours ago</small>
+                    </div>
+                    <p class="mb-0 text-muted">Could you write more about CSS Grid vs Flexbox?</p>
+                  </div>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary reply-btn"><i class="bi bi-reply me-1"></i>Reply</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Comment 3 -->
+              <div class="comment-item d-flex gap-3 mb-4">
+                <img src="https://picsum.photos/50/50?random=10" class="rounded-circle flex-shrink-0" width="50" height="50" alt="Avatar" />
+                <div class="flex-grow-1">
+                  <div class="bg-white rounded-3 p-3 shadow-sm">
+                    <div class="d-flex justify-content-between mb-2">
+                      <h6 class="fw-bold mb-0">Alex Dev</h6>
+                      <small class="text-muted">1 day ago</small>
+                    </div>
+                    <p class="mb-0 text-muted">Bookmarked this! Really clear explanation.</p>
+                  </div>
+                  <div class="mt-2">
+                    <button class="btn btn-sm btn-outline-primary reply-btn"><i class="bi bi-reply me-1"></i>Reply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
