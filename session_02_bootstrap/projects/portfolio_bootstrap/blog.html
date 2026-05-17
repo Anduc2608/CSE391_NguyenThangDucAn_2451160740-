@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <title>Blog - My Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Đặng Nguyên Trường</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <div class="py-5 text-white text-center" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)">
+      <div class="container">
+        <h1 class="fw-bold display-5">My Blog</h1>
+        <p class="lead opacity-75">Thoughts, tutorials, and insights</p>
+      </div>
+    </div>
+
+    <!-- Blog Content -->
+    <section id="blog" class="py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Main Content (8 columns) -->
+          <div class="col-lg-8">
+            <!-- Post 1 -->
+            <article class="card mb-4 shadow-sm border-0">
+              <img src="https://placehold.co/800x400" class="card-img-top" alt="Building a Portfolio" />
+              <div class="card-body p-4">
+                <span class="badge bg-primary">Technology</span>
+                <h3 class="card-title mt-2">Building a Portfolio with Bootstrap 5</h3>
+                <p class="card-text text-muted">
+                  <small>By Nguyên Trường • Jan 15, 2026 • 5 min read</small>
+                </p>
+                <p class="card-text">Learn how to build a professional portfolio website using Bootstrap 5 grid system and components.</p>
+                <a href="#" class="btn btn-outline-primary">Read More</a>
+              </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="card mb-4 shadow-sm border-0">
+              <img src="https://placehold.co/800x400" class="card-img-top" alt="CSS Tips" />
+              <div class="card-body p-4">
+                <span class="badge bg-success">Design</span>
+                <h3 class="card-title mt-2">10 CSS Tips Every Developer Should Know</h3>
+                <p class="card-text text-muted">
+                  <small>By Nguyên Trường • Feb 3, 2026 • 7 min read</small>
+                </p>
+                <p class="card-text">A collection of practical CSS tricks to speed up your workflow and write cleaner stylesheets.</p>
+                <a href="#" class="btn btn-outline-primary">Read More</a>
+              </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="card mb-4 shadow-sm border-0">
+              <img src="https://placehold.co/800x400" class="card-img-top" alt="JavaScript" />
+              <div class="card-body p-4">
+                <span class="badge bg-warning text-dark">JavaScript</span>
+                <h3 class="card-title mt-2">Understanding Async/Await in JavaScript</h3>
+                <p class="card-text text-muted">
+                  <small>By Nguyên Trường • Mar 10, 2026 • 8 min read</small>
+                </p>
+                <p class="card-text">Deep dive into asynchronous JavaScript — from callbacks to promises to async/await.</p>
+                <a href="#" class="btn btn-outline-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
