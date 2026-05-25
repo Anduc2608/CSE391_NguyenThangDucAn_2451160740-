@@ -553,4 +553,3 @@ body {
 
 # PHẦN D — VIDEO THỰC HÀNH OBS
 
-- Link video PBT_05: https://youtu.be/Eu6gEjms_2c
