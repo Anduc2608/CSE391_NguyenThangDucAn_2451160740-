@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Product Page</title>
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__logo">
+        <a href="#">ShopOnline</a>
+      </div>
+      <input type="checkbox" id="menu-toggle" class="header__toggle" hidden />
+      <label for="menu-toggle" class="header__hamburger">
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+        <span class="header__hamburger-line"></span>
+      </label>
+      <nav class="header__nav">
+        <a href="#" class="header__nav-link">Trang chủ</a>
+        <a href="#" class="header__nav-link">Sản phẩm</a>
+        <a href="#" class="header__nav-link">Khuyến mãi</a>
+        <a href="#" class="header__nav-link">Liên hệ</a>
+      </nav>
+    </header>
+
+    <!-- SIDEBAR + MAIN + ADS -->
+    <div class="page-content">
+      <aside class="sidebar">
+        <div class="sidebar__filter">
+          <h3 class="sidebar__title">Danh mục</h3>
+          <ul class="sidebar__list">
+            <li><a href="#">Điện thoại</a></li>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">Tablet</a></li>
+            <li><a href="#">Phụ kiện</a></li>
+          </ul>
+        </div>
+        <div class="sidebar__filter">
+          <h3 class="sidebar__title">Khoảng giá</h3>
+          <ul class="sidebar__list">
+            <li><a href="#">Dưới 5 triệu</a></li>
+            <li><a href="#">5 - 10 triệu</a></li>
+            <li><a href="#">10 - 20 triệu</a></li>
+            <li><a href="#">Trên 20 triệu</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/prod1/400/400" alt="iPhone 15" class="product-card__image" />
+            <div class="product-card__body">
+              <h3 class="product-card__title">iPhone 15 Pro Max</h3>
+              <p class="product-card__price">34.990.000đ</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/prod2/400/400" alt="Samsung Galaxy" class="product-card__image" />
+            <div class="product-card__body">
+              <h3 class="product-card__title">Samsung Galaxy S24</h3>
+              <p class="product-card__price">28.990.000đ</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/prod3/400/400" alt="MacBook Air" class="product-card__image" />
+            <div class="product-card__body">
+              <h3 class="product-card__title">MacBook Air M3</h3>
+              <p class="product-card__price">27.990.000đ</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/prod4/400/400" alt="iPad Pro" class="product-card__image" />
+            <div class="product-card__body">
+              <h3 class="product-card__title">iPad Pro 12.9"</h3>
+              <p class="product-card__price">24.990.000đ</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/prod5/400/400" alt="AirPods" class="product-card__image" />
+            <div class="product-card__body">
+              <h3 class="product-card__title">AirPods Pro 2</h3>
+              <p class="product-card__price">5.990.000đ</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/prod6/400/400" alt="Apple Watch" class="product-card__image" />
+            <div class="product-card__body">
+              <h3 class="product-card__title">Apple Watch Ultra 2</h3>
+              <p class="product-card__price">19.990.000đ</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/prod7/400/400" alt="Xiaomi" class="product-card__image" />
+            <div class="product-card__body">
+              <h3 class="product-card__title">Xiaomi 14 Ultra</h3>
+              <p class="product-card__price">21.990.000đ</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="https://picsum.photos/seed/prod8/400/400" alt="Sony" class="product-card__image" />
+            <div class="product-card__body">
+              <h3 class="product-card__title">Sony WH-1000XM5</h3>
+              <p class="product-card__price">8.490.000đ</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- ADS BAR (chỉ hiện desktop) -->
+      <aside class="ads-bar">
+        <div class="ads-bar__item">
+          <h3>Giảm 30%</h3>
+          <p>Hàng chính hãng</p>
+        </div>
+        <div class="ads-bar__item">
+          <h3>Freeship</h3>
+          <p>Đơn từ 500k</p>
+        </div>
+        <div class="ads-bar__item">
+          <h3>Bảo hành 12T</h3>
+          <p>Mọi sản phẩm</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer__text">2024 ShopOnline. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
