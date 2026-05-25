@@ -1,0 +1,145 @@
+body {
+  font-family: $font-primary;
+  background: $bg-body;
+  color: $text-dark;
+  font-size: 14px;
+}
+
+/* HEADER */
+.header {
+  background: $secondary-color;
+  color: $white;
+  padding: $spacing-md;
+}
+
+/* MAIN LAYOUT */
+.main-layout {
+  padding: $spacing-md;
+}
+
+/* SIDEBAR */
+.sidebar {
+  display: none;
+}
+
+/* ADS */
+.ads-bar {
+  display: none;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-md;
+}
+
+/* CARD - NESTING */
+.card {
+  background: $white;
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  @include card-shadow;
+
+  .card-image {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .card-title {
+    font-size: 18px;
+    color: $secondary-color;
+    margin-bottom: $spacing-sm;
+  }
+
+  .card-body {
+    padding: $spacing-md;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  &.featured {
+    border: 3px solid gold;
+  }
+}
+
+/* BUTTON - NESTING */
+.buy-btn {
+  background: $primary-color;
+  color: $white;
+  border: none;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $secondary-color;
+    transform: scale(1.05);
+  }
+}
+
+/* FOOTER */
+.footer {
+  background: $secondary-color;
+  color: $white;
+  text-align: center;
+  padding: $spacing-md;
+  margin-top: $spacing-lg;
+}
+
+/* TABLET */
+@include respond-to(tablet) {
+  body {
+    font-size: 16px;
+  }
+
+  .sidebar {
+    display: block;
+    background: $white;
+    padding: $spacing-md;
+    border-radius: $border-radius;
+    margin-bottom: $spacing-md;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP */
+@include respond-to(desktop) {
+  body {
+    font-size: 18px;
+  }
+
+  .main-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    gap: $spacing-md;
+  }
+
+  .sidebar {
+    display: block;
+  }
+
+  .ads-bar {
+    display: block;
+    background: $white;
+    border-radius: $border-radius;
+    padding: $spacing-md;
+
+    @include flex-center;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
