@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đoán Số</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    min-height: 100vh;
+    background: #0a0a0f;
+    color: #e8e4d8;
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: #111118;
+    border: 1px solid #2a2a3a;
+    border-radius: 2px;
+    padding: 2.5rem 2rem;
+}
+
+h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #f0eb8a;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+
+.subtitle {
+    font-size: 0.72rem;
+    color: #555570;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.hearts {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    min-height: 1.5rem;
+}
+
+.message {
+    font-size: 0.85rem;
+    min-height: 2.5rem;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid #2a2a3a;
+    color: #888899;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+}
+.message.win    { border-color: #f0eb8a; color: #f0eb8a; }
+.message.lose   { border-color: #e05555; color: #e05555; }
+.message.warn   { border-color: #e07a20; color: #e07a20; }
+.message.higher { border-color: #5fb8e0; color: #5fb8e0; }
+.message.lower  { border-color: #b05fe0; color: #b05fe0; }
+.message.pop    { animation: pop 0.25s ease; }
+
+@keyframes pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.input-row {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+input[type="number"] {
+    flex: 1;
+    background: #0a0a0f;
+    border: 1px solid #2a2a3a;
+    border-radius: 2px;
+    color: #e8e4d8;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+input[type="number"]:focus { border-color: #f0eb8a; }
+input[type="number"]:disabled { opacity: 0.4; }
+
+button {
+    background: #f0eb8a;
+    border: none;
+    border-radius: 2px;
+    color: #0a0a0f;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+}
+button:hover:not(:disabled) { opacity: 0.85; }
+button:active:not(:disabled) { transform: scale(0.97); }
+button:disabled { opacity: 0.3; cursor: default; }
+
+.btn-new {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #2a2a3a;
+    color: #555570;
+    margin-top: 0.4rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+}
+.btn-new:hover:not(:disabled) { border-color: #555570; color: #888899; opacity: 1; }
+
+.meta {
+    font-size: 0.7rem;
+    color: #333348;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+.meta span { color: #555570; }
+
+.history { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 1.2rem; }
+.history-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #1a1a28;
+    animation: slideIn 0.2s ease;
+}
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.hist-num  { color: #888899; }
+.hist-hint { color: #555570; }
+</style>
+</head>
+<body>
+<div class="card">
+    <h1>ĐOÁN SỐ</h1>
+    <p class="subtitle">1 → 100 · 7 lượt</p>
+
+    <div class="hearts" id="hearts"></div>
+
+    <p class="meta">Còn <span id="attempts-left">7</span> lượt đoán</p>
+
+    <div class="message" id="message">Nhập số để bắt đầu!</div>
+
+    <div class="input-row">
+        <input type="number" id="guess-input" min="1" max="100" placeholder="1 – 100" autocomplete="off">
+        <button id="submit-btn" onclick="submitGuess()">ĐOÁN</button>
+    </div>
+    <button class="btn-new" onclick="initGame()">↺ VÁN MỚI</button>
+
+    <div class="history" id="history"></div>
+</div>
+
+<script src="guess.js"></script>
+</body>
+</html>
