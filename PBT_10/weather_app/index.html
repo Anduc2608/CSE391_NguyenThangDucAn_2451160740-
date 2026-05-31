@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Dự Báo Thời Tiết</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-card">
+        <h2>🌤️ Dự Báo Thời Tiết</h2>
+        
+        <form id="searchForm" class="search-form">
+            <input type="text" id="cityInput" placeholder="Nhập tên thành phố (Ví dụ: Hanoi, Tokyo...)" required autocomplete="off">
+            <button type="submit" id="searchBtn">Tìm</button>
+        </form>
+
+        <div class="history-container">
+            <h3>Lịch sử tìm kiếm:</h3>
+            <div id="historyList" class="history-list">
+                </div>
+        </div>
+
+        <div id="stateContainer" class="state-container">
+            
+            <div id="initialState" class="state-content">
+                <p class="info-text">Nhập tên thành phố tiếng Anh (không dấu) để xem thời tiết.</p>
+            </div>
+
+            <div id="loadingState" class="state-content hidden">
+                <div class="spinner"></div>
+                <p>Đang tải dữ liệu thời tiết...</p>
+            </div>
+
+            <div id="successState" class="state-content hidden">
+                <div class="weather-info">
+                    <h1 id="weatherCity">Hanoi</h1>
+                    <div id="weatherIcon" class="weather-icon">☀️</div>
+                    <div id="weatherTemp" class="temp">25°C</div>
+                    <div class="details">
+                        <p>💧 Độ ẩm: <span id="weatherHumidity">80%</span></p>
+                        <p>📝 Trạng thái: <span id="weatherDesc">Trời quang</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="errorState" class="state-content hidden">
+                <div class="error-box">
+                    <span class="error-icon">⚠️</span>
+                    <p id="errorMessage">Có lỗi xảy ra khi tải dữ liệu!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
