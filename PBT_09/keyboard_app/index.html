@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Keyboard Gallery & Command Palette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Accessible Gallery</h1>
+        <div class="controls">
+            <button id="openPaletteBtn" aria-label="Mở bảng lệnh hệ thống" aria-keyshortcuts="Control+K">
+                Bảng lệnh <kbd>Ctrl + K</kbd>
+            </button>
+            <button id="slideshowBtn" aria-label="Bật hoặc tắt tự động trình chiếu ảnh" aria-keyshortcuts="Space">
+                ▶️ Play Slideshow <kbd>Space</kbd>
+            </button>
+        </div>
+        <div id="statusIndicator" role="status" aria-live="polite">Slideshow đang dừng</div>
+    </header>
+
+    <main>
+        <section id="galleryGrid" class="gallery-grid" aria-label="Danh sách hình ảnh sản phẩm công nghệ"></section>
+    </main>
+
+    <div id="lightboxModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Trình xem ảnh phóng to" aria-hidden="true">
+        <div class="modal-content lightbox-content">
+            <button id="closeLightboxBtn" class="close-btn" aria-label="Đóng trình xem ảnh">✕</button>
+            <div class="lightbox-viewer">
+                <button id="prevImgBtn" class="nav-btn" aria-label="Ảnh trước">◀</button>
+                <div class="img-wrapper">
+                    <img id="lightboxImg" src="" alt="">
+                    <p id="lightboxCaption"></p>
+                </div>
+                <button id="nextImgBtn" class="nav-btn" aria-label="Ảnh kế tiếp">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="commandPalette" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Bảng lệnh tìm kiếm nhanh" aria-hidden="true">
+        <div class="modal-content palette-content">
+            <div class="palette-header">
+                <input type="text" id="paletteInput" placeholder="Gõ từ khóa để tìm lệnh... (Ví dụ: Thống, Ảnh, Đóng)" aria-label="Tìm kiếm lệnh hệ thống" autocomplete="off">
+            </div>
+            <ul id="commandList" class="command-list" role="listbox" aria-label="Danh sách các lệnh tìm thấy">
+                </ul>
+            <div class="palette-footer">
+                <span>Di chuyển <kbd>↑</kbd> <kbd>↓</kbd></span>
+                <span>Chọn <kbd>Enter</kbd></span>
+                <span>Đóng <kbd>Esc</kbd></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
