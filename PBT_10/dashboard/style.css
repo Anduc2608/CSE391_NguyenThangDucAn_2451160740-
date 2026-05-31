@@ -1,0 +1,170 @@
+:root {
+    --bg-app: #f1f5f9;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-sub: #64748b;
+    --primary: #0284c7;
+    --primary-hover: #0369a1;
+    --border: #e2e8f0;
+    --error-bg: #fef2f2;
+    --error-text: #b91c1c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    padding: 30px 20px;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styling */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 30px;
+    background: var(--bg-card);
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.timer-text {
+    font-size: 14px;
+    color: var(--text-sub);
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.btn-refresh {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-refresh:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Responsive Grid layout */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Widget Card styling */
+.widget-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+}
+
+.widget-header {
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    background: #f8fafc;
+}
+
+.widget-body {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- TRẠNG THÁI LOADING TRONG WIDGET --- */
+.widget-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-sub);
+    font-size: 14px;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e2e8f0;
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- TRẠNG THÁI ERROR TRONG WIDGET --- */
+.widget-error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    border: 1px solid #fca5a5;
+}
+
+/* --- THIẾT KẾ DATA CHO TỪNG LOẠI WIDGET (SUCCESS) --- */
+/* Thời tiết */
+.weather-data { text-align: center; }
+.weather-data .temp { font-size: 48px; font-weight: 800; color: #0284c7; }
+.weather-data .details { margin-top: 10px; font-size: 14px; color: var(--text-sub); }
+
+/* User profile */
+.user-data { text-align: center; }
+.user-data img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid #e2e8f0; margin-bottom: 12px; }
+.user-data h3 { font-size: 18px; font-weight: 700; }
+.user-data p { font-size: 13px; color: var(--text-sub); margin-top: 4px; }
+
+/* Posts Feed */
+.posts-list { display: flex; flex-direction: column; gap: 12px; justify-content: flex-start; text-align: left;}
+.post-item { border-left: 3px solid #38bdf8; padding-left: 10px; }
+.post-item h4 { font-size: 14px; font-weight: 600; text-transform: capitalize; color: #1e293b; }
+.post-item p { font-size: 12px; color: var(--text-sub); margin-top: 2px; }
