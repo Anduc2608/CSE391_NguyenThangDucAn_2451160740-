@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Todo App</h1>
+            <form id="todoForm">
+                <input id="todoInput" type="text" placeholder="Bạn cần làm gì tiếp theo?" autocomplete="off">
+                <button type="submit">Thêm</button>
+            </form>
+        </header>
+
+        <main>
+            <nav class="filters">
+                <button data-filter="all" class="filter-btn active">Tất cả</button>
+                <button data-filter="active" class="filter-btn">Chưa làm</button>
+                <button data-filter="completed" class="filter-btn">Đã xong</button>
+            </nav>
+
+            <ul id="todoList"></ul> 
+        </main>
+
+        <footer>
+            <span id="todoCount">0 items left</span>
+            <button id="clearCompletedBtn">Xóa việc đã xong</button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
