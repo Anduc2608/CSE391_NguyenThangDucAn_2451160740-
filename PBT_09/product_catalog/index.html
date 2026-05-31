@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 id="logo">TechStore</h1>
+            
+            <div class="header-actions">
+                <button id="darkModeToggle" class="btn-action">🌙 Dark Mode</button>
+                
+                <div class="cart-icon-wrapper">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cartBadge" class="badge">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="catalog-container">
+        <section class="controls-panel">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+            
+            <div id="categoryFilterContainer" class="category-buttons">
+                </div>
+
+            <select id="sortSelect">
+                <option value="default">Sắp xếp theo</option>
+                <option value="price-asc">Giá: Thấp đến Cao</option>
+                <option value="price-desc">Giá: Cao đến Thấp</option>
+                <option value="name-asc">Tên: A - Z</option>
+                <option value="rating-desc">Đánh giá cao nhất</option>
+            </select>
+        </section>
+
+        <section id="productGrid" class="product-grid">
+            </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
