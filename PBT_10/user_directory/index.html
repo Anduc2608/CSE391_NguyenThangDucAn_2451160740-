@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory (CRUD)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>👥 Danh bạ Thành viên</h1>
+            <p>Quản lý thông tin tài khoản người dùng hệ thống</p>
+        </header>
+
+        <div class="toolbar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Tìm theo tên hoặc email...">
+            </div>
+            <button id="openAddModalBtn" class="btn btn-primary">+ Thêm Thành Viên</button>
+        </div>
+
+        <main id="userGrid" class="user-grid">
+            </main>
+    </div>
+
+    <div id="userModal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Thêm Thành Viên Mới</h3>
+                <button id="closeModalBtn" class="close-btn">&times;</button>
+            </div>
+            <form id="userForm">
+                <input type="hidden" id="userIdInput">
+                
+                <div class="form-group">
+                    <label for="nameInput">Họ và tên</label>
+                    <input type="text" id="nameInput" required placeholder="Ví dụ: Nguyễn Văn A">
+                </div>
+                
+                <div class="form-group">
+                    <label for="emailInput">Email</label>
+                    <input type="email" id="emailInput" required placeholder="Ví dụ: name@company.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phoneInput">Số điện thoại</label>
+                    <input type="text" id="phoneInput" required placeholder="Ví dụ: 0912 345 678">
+                </div>
+
+                <div class="form-group">
+                    <label for="companyInput">Công ty / Tổ chức</label>
+                    <input type="text" id="companyInput" placeholder="Ví dụ: VinGroup">
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="cancelFormBtn" class="btn btn-secondary">Hủy</button>
+                    <button type="submit" id="submitFormBtn" class="btn btn-primary">Lưu lại</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
