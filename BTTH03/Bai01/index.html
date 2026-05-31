@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Hệ Thống Quản Lý Sinh Viên</h1>
+            <div class="alert-container" id="alertContainer"></div>
+        </header>
+
+        <section class="statistics-card">
+            <div class="stat-item">
+                <span class="stat-label">Tổng số sinh viên:</span>
+                <span class="stat-value" id="totalStudents">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Điểm trung bình lớp:</span>
+                <span class="stat-value" id="classAverage">0.0</span>
+            </div>
+        </section>
+
+        <div class="action-bar">
+            <button id="openModalBtn" class="btn btn-success">+ Thêm Sinh Viên Mới</button>
+        </div>
+
+        <main class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>MSSV</th>
+                        <th>Họ và Tên</th>
+                        <th>Email</th>
+                        <th>Ngày Sinh</th>
+                        <th>Lớp</th>
+                        <th>ĐTB</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    </tbody>
+            </table>
+        </main>
+    </div>
+
+    <div id="studentModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Thêm Sinh Viên Mới</h3>
+                <span id="closeModalBtn" class="close-btn">&times;</span>
+            </div>
+            <form id="studentForm" novalidate>
+                <input type="hidden" id="formMode" value="ADD">
+                
+                <div class="form-group">
+                    <label for="studentId">Mã Sinh Viên (MSSV) *</label>
+                    <input type="text" id="studentId" required placeholder="Ví dụ: B20DCCN001">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName">Họ và Tên *</label>
+                    <input type="text" id="fullName" required placeholder="Ví dụ: Nguyễn Văn A">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required placeholder="nguyenvana@gmail.com">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthDate">Ngày Sinh *</label>
+                    <input type="date" id="birthDate" required>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="className">Lớp Học *</label>
+                    <input type="text" id="className" required placeholder="Ví dụ: K66-CSE391">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="gpa">Điểm Trung Bình *</label>
+                    <input type="number" id="gpa" min="0" max="10" step="0.1" required placeholder="Từ 0.0 đến 10.0">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Hủy bỏ</button>
+                    <button type="submit" id="saveBtn" class="btn btn-primary">Lưu Lại</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
