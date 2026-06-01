@@ -1,33 +1,19 @@
-function ProjectCard({ title, category, image, description, tags }) {
-  const categoryColors = {
-    web: "bg-primary",
-    mobile: "bg-success",
-    design: "bg-warning",
-  };
- // [FEATURE] Render project list from state
+import { useState } from "react";
+import { portfolioItems } from "../data/portfolio";
+
+function Portfolio() {
+  const [filter, setFilter] = useState("all");
+
+  const categories = ["all", "web", "mobile", "design"];
+
   return (
-     <div className="portfolio-card">
-      <div className="card-image">
-        <img src={image} alt={title} />
-        <div className="card-overlay">
-          <h3>{title}</h3>
-          <p>{category}</p>
-        </div>
+     <section id="portfolio" className="portfolio">
+      <div className="container">
+        <h2 className="section-title text-center">My Portfolio</h2>
+        <p className="section-subtitle text-center">Recent projects I've worked on</p>
       </div>
-      <div className="card-body">
-        <span className={`badge ${categoryColors[category]}`}>{category}</span>
-        <h3 className="card-title">{title}</h3>
-        <p className="card-text">{description}</p>
-        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-          {tags.map((tag) => (
-            <span key={tag} className="badge" style={{ background: "#f1f5f9", color: "#334155" }}>
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
+     </section>
   );
 }
 
-export default ProjectCard;
+export default Portfolio;
