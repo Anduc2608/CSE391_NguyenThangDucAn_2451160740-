@@ -45,52 +45,58 @@ function Contact() {
     }
 
     return newErrors;
+    const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", email: "", message: "" });
+    alert("Message sent successfully!");
+  };
+
   return (
     <section className="contact" id="contact">
       <div className="container">
         <h2 className="section-title text-center">Get In Touch</h2>
         <div className="contact-card">
-         <div className="form-grid">
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className={`form-control ${errors.name ? "error" : ""}`}
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Your name"
-              />
-              {errors.name && <span className="error-message">{errors.name}</span>}
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className={`form-control ${errors.email ? "error" : ""}`}
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Your email"
-              />
-              {errors.email && <span className="error-message">{errors.email}</span>}
-            </div>
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              className={`form-control ${errors.message ? "error" : ""}`}
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Your message"
-            />
-            {errors.message && <span className="error-message">{errors.message}</span>}
-          </div>
+        <form onSubmit={handleSubmit}>
+            <div className="form-grid">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className={`form-control ${errors.name ? "error" : ""}`}
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your name"
+                />
+                {errors.name && <span className="error-message">{errors.name}</span>}
+                </div>
+              </div>
+              <div className="form-group">
+                 <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                className={`form-control ${errors.message ? "error" : ""}`}
+                value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your message"
+                />
+                 {errors.message && <span className="error-message">{errors.message}</span>}
+              </div>
+            <button type="submit" className="btn btn-primary w-100">
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>
