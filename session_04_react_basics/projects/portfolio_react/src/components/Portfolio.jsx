@@ -4,7 +4,7 @@ function ProjectCard({ title, category, image, description, tags }) {
     mobile: "bg-success",
     design: "bg-warning",
   };
-
+ // [FEATURE] Render project list from state
   return (
      <div className="portfolio-card">
       <div className="card-image">
