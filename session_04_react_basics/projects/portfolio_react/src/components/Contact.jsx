@@ -1,25 +1,22 @@
-function Footer() {
+import { useState } from "react";
+
+function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   return (
-    <footer className="footer">
+    <section className="contact" id="contact">
       <div className="container">
-        <div className="footer-content">
-          <div className="footer-logo">YourName</div>
-          <p className="footer-tagline">Full-Stack Developer</p>
-          <div className="social-links">
-            <a href="#" className="social-link">
-              <i className="bi bi-github"></i>
-            </a>
-            <a href="#" className="social-link">
-              <i className="bi bi-linkedin"></i>
-            </a>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>© 2026 YourName. All rights reserved.</p>
+        <h2 className="section-title text-center">Get In Touch</h2>
+        <div className="contact-card">
+          <p className="text-center text-muted">Feel free to reach out!</p>
         </div>
       </div>
-    </footer>
+    </section>
   );
 }
 
-export default Footer;
+export default Contact;
