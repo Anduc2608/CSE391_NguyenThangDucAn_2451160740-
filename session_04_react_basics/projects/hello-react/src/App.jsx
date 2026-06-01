@@ -26,6 +26,11 @@ import ClickEvents from "./components/ClickEvents";
 import InputEvents from "./components/InputEvents";
 import KeyboardEvents from "./components/KeyboardEvents";
 import FormEvents from "./components/FormEvents";
+// Tier 6
+import ListBasics from "./components/ListBasics";
+import CreateItem from "./components/CreateItem";
+import DeleteItem from "./components/DeleteItem";
+import UpdateItem from "./components/UpdateItem";
 
 const products = [
   { id: 1, name: "iPhone 15", price: "25.000.000", image: "https://placehold.co/200x150" },
@@ -121,6 +126,21 @@ function App() {
       <hr />
       <h2>Bài 5.4 — Form Events</h2>
       <FormEvents />
+
+      {/* ===== TIER 6 ===== */}
+      <h1 style={{ marginTop: "40px" }}>Tier 6 — Lists & CRUD</h1>
+      <hr />
+      <h2>Bài 6.1 — Render danh sách</h2>
+      <ListBasics />
+      <hr />
+      <h2>Bài 6.2 — Thêm phần tử (CREATE)</h2>
+      <CreateItem />
+      <hr />
+      <h2>Bài 6.3 — Xóa phần tử (DELETE)</h2>
+      <DeleteItem />
+      <hr />
+      <h2>Bài 6.4 — Sửa phần tử (UPDATE)</h2>
+      <UpdateItem />
     </div>
   );
 }
