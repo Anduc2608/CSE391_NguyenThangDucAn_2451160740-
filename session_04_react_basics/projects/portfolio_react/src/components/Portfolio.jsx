@@ -17,7 +17,7 @@ function Portfolio() {
         <p className="section-subtitle text-center">Recent projects I've worked on</p>
          <div className="filter-buttons">
           {categories.map((category) => (
-            <button key={category} className="filter-btn" onClick={() => handleFilterChange(category)}>
+             <button key={category} className={`filter-btn ${filter === category ? "active" : ""}`} onClick={() => handleFilterChange(category)}>
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
           ))}
