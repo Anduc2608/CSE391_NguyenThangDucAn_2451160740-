@@ -5,32 +5,32 @@ import UserProfile from "./components/UserProfile";
 import ProductInfo from "./components/ProductInfo";
 
 // Tier 2
-import SimpleVariables from "./components/SimpleVariables";
-import ConditionalRendering from "./components/ConditionalRendering";
-import ListRendering from "./components/ListRendering";
+import SimpleVariables from "../../../solutions/TIER_2_jsx_variables/Simplevariables";
+import ConditionalRendering from "../../../solutions/TIER_2_jsx_variables/Conditionalrendering";
+import ListRendering from "../../../solutions/TIER_2_jsx_variables/Listrendering";
 // Tier 3
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ProductCard from "./components/ProductCard";
-import UserCard from "./components/UserCard";
-import PriceTag from "./components/PriceTag";
+import Header from "../../../solutions/TIER_3_component_split/Header";
+import Footer from "../../../solutions/TIER_3_component_split/Footer";
+import ProductCard from "../../../solutions/TIER_3_component_split/Productcard";
+import UserCard from "../../../solutions/TIER_3_component_split/Usercard";
+import PriceTag from "../../../solutions/TIER_3_component_split/Pricetag";
 
 // Tier 4
-import NumberState from "./components/NumberState";
-import StringState from "./components/StringState";
-import BooleanState from "./components/BooleanState";
-import MultipleStates from "./components/MultipleStates";
+import NumberState from "../../../solutions/TIER_4_useState_basics/Numberstate";
+import StringState from "../../../solutions/TIER_4_useState_basics/Stringstate";
+import BooleanState from "../../../solutions/TIER_4_useState_basics/Booleanstate";
+import MultipleStates from "../../../solutions/TIER_4_useState_basics/Multiplestates";
 
 // Tier 5
-import ClickEvents from "./components/ClickEvents";
-import InputEvents from "./components/InputEvents";
-import KeyboardEvents from "./components/KeyboardEvents";
-import FormEvents from "./components/FormEvents";
+import ClickEvents from "../../../solutions/TIER_5_events_basics/Clickevents";
+import InputEvents from "../../../solutions/TIER_5_events_basics/Inputevents";
+import KeyboardEvents from "../../../solutions/TIER_5_events_basics/Keyboardevents";
+import FormEvents from "../../../solutions/TIER_5_events_basics/Formevents";
 // Tier 6
-import ListBasics from "./components/ListBasics";
-import CreateItem from "./components/CreateItem";
-import DeleteItem from "./components/DeleteItem";
-import UpdateItem from "./components/UpdateItem";
+import ListBasics from "../../../solutions/TIER_6_lists_crud/Listbasics";
+import CreateItem from "../../../solutions/TIER_6_lists_crud/Createitem";
+import DeleteItem from "../../../solutions/TIER_6_lists_crud/Deleteitem";
+import UpdateItem from "../../../solutions/TIER_6_lists_crud/Updateitem";
 
 const products = [
   { id: 1, name: "iPhone 15", price: "25.000.000", image: "https://placehold.co/200x150" },
